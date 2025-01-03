@@ -1,7 +1,7 @@
 /* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
-/* Asterisk wildcard to override default styles added by the browser */
+/* Reset styles using the Asterisk wildcard to override default styles added by the browser */
 * {
     padding: 0;
     margin: 0;
@@ -15,10 +15,17 @@ body {
     flex-direction: column;
     color: #3a3a3a;
     font-family: 'Lato', sans-serif;
+    padding-top: 60px; /* space for fixed header */
 }
 
 header {
-    background-color: lightcoral;
+    background-color: #ffffff;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 2px #3a3a3a;
 }
 
 h1 {
@@ -28,17 +35,36 @@ h1 {
 main {
     background-color: lightblue;
     flex: 1 0 auto;
+    padding: 1rem;
 }
 
 footer {
     background-color: orange;
+    padding: 1rem;
+    text-align: center;
 }
 
 /* Specific styles for navigation */
+nav {
+    width: 100%; /* Full width navigation */
+}
+
 nav ul {
-    list-style-type: none;  /* Removes the bullet points from list */
+    list-style-type: none;  /* Removes the bullet points from the list */
+    text-align: center;     /* Centers the navigation links */
 }
 
 nav ul li {
     display: block;  /* Each list item will display as a block, i.e., on a new line */
+    padding: 10px 0; /* Adds padding above and below the links */
+}
+
+nav ul li a {
+    text-decoration: none;  /* Removes underline from links */
+    color: #3a3a3a;         /* Sets the color of the links */
+    font-weight: bold;      /* Makes the link text bold */
+}
+
+nav ul li a:hover {
+    color: #ff6347;  /* Changes the color of links on hover */
 }
